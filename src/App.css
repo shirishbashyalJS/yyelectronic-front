@@ -1,0 +1,253 @@
+/***** header *****/
+* {
+  font-size: 62.5%;
+}
+.body {
+  overflow-x: hidden;
+}
+.navbar {
+  width: 100%;
+  top: 0;
+  z-index: 9000;
+  box-shadow: 0rem 1rem 1rem orange;
+}
+
+.navbar .navbar-nav .nav-item {
+  position: relative;
+}
+
+.navbar-brand-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-title {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.cart-logo {
+  font-size: 3rem;
+}
+.hover-big {
+  transition: scale 0.15s;
+  z-index: 500;
+}
+.hover-big:hover {
+  scale: 1.05;
+}
+.cart-nav {
+  position: relative;
+}
+.ordered-number {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-40%);
+  height: 15px;
+  width: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+.ordered-number p {
+  font-size: 16px;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+/* home */
+
+/* Items */
+.items {
+  height: max-content;
+  width: 100%;
+}
+.notice {
+  position: relative;
+}
+.log-out {
+  position: absolute;
+  right: 1rem;
+  top: -3rem;
+}
+.items .card {
+  padding: 0;
+  scale: 0.5;
+  opacity: 0;
+  animation: fade linear forwards;
+  animation-timeline: view();
+  animation-range: entry;
+}
+@keyframes fade {
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+.order-items {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+.order-item {
+  background-color: rgba(233, 232, 232, 0.661);
+  padding: 3px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  width: 100%;
+}
+#bestitems {
+  width: 100%;
+  height: 10rem;
+}
+.items-title {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 500;
+  text-shadow: 1px -1px 1px black;
+}
+.best-card-text {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  /* text-decoration: none; */
+}
+.bestitems-link {
+  text-decoration: none;
+  color: black;
+}
+.bestitems-link {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-title .best-items-card {
+  cursor: pointer;
+}
+
+.label-btn {
+  margin: 5px;
+}
+@media only screen and (max-width: 570px) {
+  .btn-group {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-row-gap: 1rem;
+  }
+  .radio-input {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .label-btn {
+    margin: 0;
+  }
+}
+.all-items {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container .card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 3px;
+  padding: 10px;
+  min-width: 250px;
+  height: max-content;
+  position: relative;
+  text-align: center;
+}
+
+.card-container .card-image {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-container .card-image .card-image-image {
+  border-radius: 10px;
+  height: auto;
+  max-height: 30vh;
+}
+
+.success {
+  position: fixed;
+  top: 6rem;
+  right: 20px;
+  font-size: 25px;
+  background-color: green;
+  color: white;
+  height: 4rem;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  z-index: 10000;
+  overflow: hidden;
+}
+.success-tail {
+  background-color: chocolate;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  animation: move-tail linear 3s;
+}
+@keyframes move-tail {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.fade-in {
+  animation: fadeIn 0.15s linear forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fade-out {
+  animation: fadeOut 0.15s linear forwards;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* //.product-container */
+
+/* cartPage */
