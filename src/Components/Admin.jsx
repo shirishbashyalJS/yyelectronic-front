@@ -19,7 +19,9 @@ export default function Admin({ baseURL, success, setSuccess }) {
     // fetch orders
     axios
       .get(`${baseURL}admin`, { headers: { password } })
-      .then((res) => setOrders(res.data))
+      .then((res) => {
+        setOrders(res.data);
+      })
       .catch(() => {
         alert("Unauthorized or server error");
         navigate("/");
@@ -108,11 +110,12 @@ export default function Admin({ baseURL, success, setSuccess }) {
                 <div className="items fs-1" key={i}>
                   <p>Item: {o.name}</p>
                   <p>Rate: {o.rate}</p>
-                  <p>Discount: {o.discount}%</p>
+                  <p>DP: {o.dp}</p>
                   <p>
                     Quantity: {o.quantity} {o.unit}
                   </p>
                   <p>Total Amount: {o.total}</p>
+                  <p>Profit: {Math.round((o.rate - o.dp) * o.quantity)}</p>
                   <hr />
                 </div>
               ))}

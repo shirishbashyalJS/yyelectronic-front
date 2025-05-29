@@ -25,14 +25,19 @@ export const Notice = ({ setFormData, formData, setOrdered }) => {
         YY Electronics offers durable electronic products with warranty at the
         best prices. Your online order will be confirmed via phone call.
         Currently, we deliver only in Rupandehi. We accept Cash on Delivery or
-        QR payments. Delivery charges apply and will be informed in advance. For
-        more details, feel free to contact us.{" "}
+        QR payments. Delivery charges will be free on Siddhartha Highway and if
+        not lies on Siddhartha Highway could cost some delivery charge and will
+        be informed in advance. For more details, feel free to contact us.{" "}
         <a href="tel:+977-9766282901" className="fs-4">
           Call us at +977-9766282901
         </a>{" "}
         Or{" "}
         <a href="tel:+977-9763663479" className="fs-4">
-          Call us at +977-9763663479
+          +977-9763663479
+        </a>{" "}
+        Or{" "}
+        <a href="tel:+977 976-3637607" className="fs-4">
+          +977 976-3637607
         </a>
       </h1>
     </div>

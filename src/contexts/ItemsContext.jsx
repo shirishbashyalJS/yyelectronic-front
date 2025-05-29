@@ -1,23 +1,3 @@
-// import React, { createContext, useState, useEffect } from "react";
-// import axios from "axios";
-
-// export const ItemsContext = createContext([]);
-
-// export function ItemsProvider({ children }) {
-//   const [items, setItems] = useState([]);
-
-//   useEffect(() => {
-//     axios
-//       .get("http://localhost:8000/products")
-//       .then((res) => setItems(res.data))
-//       .catch((err) => console.error("Failed to load products:", err));
-//   }, []);
-
-//   return (
-//     <ItemsContext.Provider value={items}>{children}</ItemsContext.Provider>
-//   );
-// }
-
 // src/contexts/ItemsContext.jsx
 import React, { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
@@ -28,6 +8,7 @@ const ItemsContext = createContext([]);
 export function ItemsProvider({ children }) {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
+  // const baseURL = "https://yyelectronic-back.onrender.com/";
   const baseURL = "http://localhost:8000/";
 
   useEffect(() => {
