@@ -35,7 +35,6 @@ function App() {
   const [success, setSuccess] = useState(false);
   const [ordered, setOrdered] = useState([]);
   const baseURL = "http://localhost:8000/";
-  // const baseURL = "https://yyelectronic-back.onrender.com/";
 
   const orderGetRequest = async (contact) => {
     try {
