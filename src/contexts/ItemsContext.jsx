@@ -8,7 +8,6 @@ const ItemsContext = createContext([]);
 export function ItemsProvider({ children }) {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
-  // const baseURL = "https://yyelectronic-back.onrender.com/";
   const baseURL = "http://localhost:8000/";
 
   useEffect(() => {
